@@ -5,8 +5,6 @@ const optArticleSelector = ".post",
   optTitleListSelector = ".titles";
 
 const generateTitleLinks = () => {
-  console.log("GenerateTitleLinks is working...");
-
   /* [DONE] clean up list of links with titles of articles */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = "";
@@ -16,14 +14,18 @@ const generateTitleLinks = () => {
   and insert them into html titles list */
   const articles = document.querySelectorAll(optArticleSelector);
   let html = "";
-  for(let article of articles) {
+  for (let article of articles) {
     const articleId = article.getAttribute("id");
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
-    const linkHTML = `<li><a href="#${articleId}"><span>${articleTitle}</span></a></li>`;    
+    const linkHTML = `<li><a href="#${articleId}"><span>${articleTitle}</span></a></li>`;
     html = html + linkHTML;
-    console.log(html);
   }
   titleList.innerHTML = html;
+
+  const links = document.querySelectorAll(".titles a");
+  for (let link of links) {
+    link.addEventListener("click", titleClickHandler);
+  }
 }
 generateTitleLinks();
 
@@ -38,7 +40,6 @@ const titleClickHandler = function(event) {
   }
 
   /* [DONE] add class 'active' to the clicked link */
-  console.log("clickedElement:", clickedElement);
   clickedElement.classList.add("active");
 
   /* [DONE] remove class 'active' from all articles that have this class */
@@ -55,10 +56,4 @@ const titleClickHandler = function(event) {
 
   /* [DONE] add class 'active' to the correct article */
   currentArticle.classList.add("active");
-}
-
-const links = document.querySelectorAll(".titles a");
-
-for (let link of links) {
-  link.addEventListener("click", titleClickHandler);
 }
