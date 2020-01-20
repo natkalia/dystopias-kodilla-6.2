@@ -1,0 +1,2 @@
+# javascript-blog
+practicing JS
