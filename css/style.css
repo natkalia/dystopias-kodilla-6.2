@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Bangers|Oswald:400,600|Roboto:300&display=swap&subset=latin-ext");
 /* Variables */
 /* Global */
 *, *::before, *::after {
@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  background: #444;
+  font-family: "Roboto", sans-serif;
   color: #444;
   font-weight: 300;
   font-size: 16px;
@@ -59,7 +59,8 @@ body {
 
 /* Logo */
 .logo {
-  font-family: "Sacramento", cursive;
+  font-family: "Bangers", cursive;
+  color: #fff;
   font-weight: 400;
   font-size: 104px;
   line-height: 1;
