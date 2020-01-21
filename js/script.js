@@ -6,7 +6,8 @@ const optArticleSelector = '.post',
   optArticleTagsSelector = '.post-tags .list',
   optArticleTagsLinksSelector = '.post-tags .list a',
   optArticleAuthorSelector = '.post-author',
-  optArticleAuthorLinksSelector = '.post-author a';
+  optArticleAuthorLinksSelector = '.post-author a',
+  optTagsListSelector = '.tags.list';
 
 const titleClickHandler = function(event) {
   event.preventDefault();
@@ -63,17 +64,49 @@ const generateTitleLinks = (customSelector = '') => {
 generateTitleLinks();
 
 const generateTags = () => {
+  /* [DONE] create a new variable allTags with an empty array */
+  let allTags = [];
+
+  /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
+
+  /* [DONE] START LOOP: for every article: */
   for (let article of articles) {
-    const tags = article.getAttribute('data-tags').split(' ');
+    /* [DONE] find tags wrapper */
     const tagsList = article.querySelector(optArticleTagsSelector);
+
+    /* [DONE] make html variable with empty string */
     let html = '';
+
+    /* [DONE] get tags from data-tags attribute and split tags into array */
+    const tags = article.getAttribute('data-tags').split(' ');
+
+    /* [DONE] START LOOP: for each tag */
     tags.forEach(tag => {
+      /* [DONE] generate HTML of the link */
       const tagHTML = `<li><a href='#tag-${tag}'>${tag}</a></li> `;
+      /* [DONE] add generated code to html variable */
       html = html + tagHTML;
+
+      /* [DONE] check if this link is NOT already in allTags */
+      if(!allTags.includes(tagHTML)) {
+        /* [DONE] add generated code to allTags array */
+        allTags.push(tagHTML);
+      }
+
+    /* END LOOP: for each tag */
     });
+    /* [DONE] insert HTML of all the links into the tags wrapper */
     tagsList.innerHTML = html;
+  /* END LOOP: for every article: */
   }
+
+  /* [DONE] find list of tags in right column */
+  const tagList = document.querySelector(optTagsListSelector);
+
+  /* [DONE] add html from allTags to tagList */
+  tagList.innerHTML = allTags.join(' ');
+
 };
 generateTags();
 
