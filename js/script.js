@@ -1,5 +1,10 @@
 'use strict';
 
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles',
+  optArticleTagsSelector = '.post-tags .list';
+
 const titleClickHandler = function(event) {
   event.preventDefault();
   const clickedElement = this;
@@ -29,16 +34,12 @@ const titleClickHandler = function(event) {
   currentArticle.classList.add('active');
 };
 
-const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles';
-
 const generateTitleLinks = () => {
   /* [DONE] clean up list of links with titles of articles */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
 
-  /* [DONE] for each article find its id and title 
+  /* [DONE] for each article find its id and title
   and use them to dynamically create html links
   and insert them into html titles list */
   const articles = document.querySelectorAll(optArticleSelector);
@@ -57,3 +58,18 @@ const generateTitleLinks = () => {
   }
 };
 generateTitleLinks();
+
+const generateTags = () => {
+  const articles = document.querySelectorAll(optArticleSelector);
+  for (let article of articles) {
+    const tags = article.getAttribute('data-tags').split(' ');
+    const tagsList = article.querySelector(optArticleTagsSelector);
+    let html = '';
+    tags.forEach(tag => {
+      const tagHTML = `<li><a href='#tag-${tag}'>${tag}</a></li> `;
+      html = html + tagHTML;
+    });
+    tagsList.innerHTML = html;
+  }
+};
+generateTags();
