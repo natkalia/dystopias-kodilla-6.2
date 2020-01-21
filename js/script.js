@@ -125,11 +125,9 @@ const tagClickHandler = (event) => {
 
   /* make new constant named "clickedElement" and give it the value of "this" */
   const clickedElement = event.target;
-  console.log(event.target);
 
   /* make a new constant "href" and read the attribute "href" of the clicked element */
   const href = clickedElement.getAttribute('href');
-  console.log(href);
 
   /* make a new constant and extract tag from the "href" constant */
   const tag = href.replace('#tag-', '');
@@ -160,7 +158,6 @@ const tagClickHandler = (event) => {
 const addClickListenersToTags = () => {
   /* find all links to tags */
   const tagLinks = document.querySelectorAll(('a[href^="#tag-"]'));
-  console.log(tagLinks);
 
   /* START LOOP: for each link */
   tagLinks.forEach(link => {
