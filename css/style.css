@@ -34,19 +34,16 @@ body {
 
 /* Layout */
 .wrapper {
-  display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
 }
 
 .sidebar {
-  -ms-flex: 1 0 0px;
-      flex: 1 0 0;
+  flex: 1 0 0;
 }
 
 .posts {
-  -ms-flex: 2 0 0px;
-      flex: 2 0 0;
+  flex: 2 0 0;
 }
 
 .sidebar, .posts {
@@ -106,7 +103,6 @@ body {
 }
 
 .post-tags {
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -122,7 +118,7 @@ body {
 
 .tag-size-2 {
   font-size: 120%;
-  color: #27ae60;
+  color: #f39c12;
 }
 
 .tag-size-3 {
@@ -139,4 +135,5 @@ body {
   font-size: 180%;
   color: #e74c3c;
 }
+
 /*# sourceMappingURL=style.css.map */
