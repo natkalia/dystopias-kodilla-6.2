@@ -7,6 +7,7 @@ const optArticleSelector = '.post',
   optArticleAuthorSelector = '.post-author',
   optArticleAuthorLinksSelector = '.post-author a',
   optTagsListSelector = '.tags.list',
+  optAuthorsListSelector = '.authors.list',
   optCloudClassCount = 5,
   optCloudClassPrefix = 'tag-size-';
 
@@ -192,13 +193,40 @@ const addClickListenersToTags = () => {
 addClickListenersToTags();
 
 const generateAuthors = () => {
+  /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
+
+  /* [DONE] create a new variable allAuthors with an empty object */
+  const allAuthors = {};
+
+  /* [DONE] create variable for all author links HTML code */
+  let allAuthorsHTML = '';
+
+  /* [DONE] for each article generate html to be inserted under article title */
   for (let article of articles) {
+    /* [DONE] get author name and insert under title name */
     const author = article.getAttribute('data-author');
     const authorListing = article.querySelector(optArticleAuthorSelector);
     const authorHTML = `<a href="#author-${author.replace(/\s+/g, '-')}">by ${author}</a>`;
     authorListing.innerHTML = authorHTML;
+    /* [DONE] put author with bumber of occurences into object allAuthors */
+    if (!allAuthors.hasOwnProperty(author)) {
+      allAuthors[author] = 1;
+    } else {
+      allAuthors[author]++;
+    }
   }
+
+  /* [DONE] create html links for all authors and number of occurences */
+  for (let author in allAuthors) {
+    allAuthorsHTML += `<li><a href="#author-${author.replace(/\s+/g, '-')}">${author} (${allAuthors[author]})</a></li> `;
+  }
+
+  /* [DONE] find list of authors in right column */
+  const authorList = document.querySelector(optAuthorsListSelector);
+
+  /* [DONE] add html from allAuthorsHTML to authorList */
+  authorList.innerHTML = allAuthorsHTML;
 };
 generateAuthors();
 
@@ -239,7 +267,7 @@ const authorClickHandler = (event) => {
 };
 
 const addClickListenersToAuthors = () => {
-  const authorLinks = document.querySelectorAll(optArticleAuthorLinksSelector);
+  const authorLinks = document.querySelectorAll(('a[href^="#author-"]'));
   authorLinks.forEach(link => {
     link.addEventListener('click', authorClickHandler);
   });
