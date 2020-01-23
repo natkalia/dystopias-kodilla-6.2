@@ -5,6 +5,12 @@
 $color-light: #fff;
 $color-dark: #444;
 
+$color-tag-1: #27ae60;
+$color-tag-2: #27ae60;
+$color-tag-3: #2980b9;
+$color-tag-4: #9b59b6;
+$color-tag-5: #e74c3c;
+
 $font-logo: 'Bangers', cursive;
 $font-header: 'Oswald', sans-serif;
 $font-text: 'Roboto', sans-serif;
@@ -94,6 +100,11 @@ body {
   }
 }
 
+.list.tags a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* Authors */
 
 .authors {
@@ -122,4 +133,30 @@ body {
   p {
     margin: 0 10px 0 0;
   }
+}
+
+/* Tag sizes */
+.tag-size-1 {
+  font-size: 100%;
+  color: $color-tag-1;
+}
+
+.tag-size-2 {
+  font-size: 120%;
+  color: $color-tag-2;
+}
+
+.tag-size-3 {
+  font-size: 140%;
+  color: $color-tag-3;
+}
+
+.tag-size-4 {
+  font-size: 160%;
+  color: $color-tag-4;
+}
+
+.tag-size-5 {
+  font-size: 180%;
+  color: $color-tag-5;
 }
