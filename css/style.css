@@ -72,6 +72,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color: #444;
 }
 
 .list .active {
@@ -87,9 +88,13 @@ body {
   font-weight: bold;
 }
 
+.list.titles a {
+  color: #444;
+}
+
 /* Authors */
-.authors li {
-  margin-bottom: 12px;
+.authors a {
+  color: #444;
 }
 
 /* Post */
@@ -101,8 +106,9 @@ body {
   display: block;
 }
 
-.post-author {
+.post-author a {
   font-style: italic;
+  color: #444;
 }
 
 .post-tags {
@@ -112,6 +118,10 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+.post-tags .list a {
+  color: #444;
 }
 
 /* Tag sizes */
