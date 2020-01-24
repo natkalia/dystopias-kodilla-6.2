@@ -11,6 +11,7 @@ const templates = {
 const select = {
   all: {
     articles: '.post',
+    titles: '.post-title',
     linksTo: {
       tags: 'a[href^="#tag-"]',
       authors: 'a[href^="#author-"]',
@@ -160,7 +161,7 @@ const generateTitleLinks = (customSelector = '') => {
   let titleListHTML = '';
   for (let article of articles) {
     const articleId = article.getAttribute('id');
-    const articleTitle = article.querySelector('.post-title').innerHTML;
+    const articleTitle = article.querySelector(select.all.titles).innerHTML;
     const articleLinkHTMLData = {
       id: articleId,
       title: articleTitle
