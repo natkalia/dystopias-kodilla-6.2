@@ -72,6 +72,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color: #444;
 }
 
 .list .active {
@@ -82,9 +83,18 @@ body {
   display: inline-block;
 }
 
+.list.tags a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list.titles a {
+  color: #444;
+}
+
 /* Authors */
-.authors li {
-  margin-bottom: 12px;
+.authors a {
+  color: #444;
 }
 
 /* Post */
@@ -96,8 +106,9 @@ body {
   display: block;
 }
 
-.post-author {
+.post-author a {
   font-style: italic;
+  color: #444;
 }
 
 .post-tags {
@@ -107,5 +118,35 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+.post-tags .list a {
+  color: #444;
+}
+
+/* Tag sizes */
+.tag-size-1 {
+  font-size: 100%;
+  color: #27ae60;
+}
+
+.tag-size-2 {
+  font-size: 120%;
+  color: #f39c12;
+}
+
+.tag-size-3 {
+  font-size: 140%;
+  color: #2980b9;
+}
+
+.tag-size-4 {
+  font-size: 160%;
+  color: #9b59b6;
+}
+
+.tag-size-5 {
+  font-size: 180%;
+  color: #e74c3c;
 }
 /*# sourceMappingURL=style.css.map */
