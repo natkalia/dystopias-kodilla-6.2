@@ -196,7 +196,7 @@ const generateAuthors = () => {
     const authorArticleHTML = templates.authorArticleLink(authorArticleHTMLData);
     authorArticle.innerHTML = authorArticleHTML;
     /* add author with number of occurences into object allAuthors */
-    if (!allAuthors.hasOwnProperty(author)) {
+    if (!{}.hasOwnProperty.call(allAuthors, author)) {
       allAuthors[author] = 1;
     } else {
       allAuthors[author]++;
@@ -238,7 +238,7 @@ const generateTags = () => {
       };
       const tagHTML = templates.tagArticleLink(tagArticleHTMLData);
       html = html + tagHTML;
-      if (!allTags.hasOwnProperty(tag)) {
+      if (!{}.hasOwnProperty.call(allTags, tag)) {
         allTags[tag] = 1;
       } else {
         allTags[tag]++;
