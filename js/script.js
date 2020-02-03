@@ -127,7 +127,6 @@ const tagClickHandler = (event) => {
 
 const addClickListenersToTags = () => {
   const tagLinks = document.querySelectorAll(select.all.linksTo.tags);
-  console.log(tagLinks);
   tagLinks.forEach(link => {
     link.addEventListener('click', tagClickHandler);
   });
