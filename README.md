@@ -9,7 +9,7 @@ In Kodilla this exercise was prepared with different content, I decided to chang
 
 ## Setup
 
-**Live:** [IN PROGRESS] [https://natkalia.github.io/dystopias-kodilla-6.2](https://natkalia.github.io/dystopias-kodilla-6.2)
+**Live:** [https://natkalia.github.io/dystopias-kodilla-6.2](https://natkalia.github.io/dystopias-kodilla-6.2)
 
 **Repository**: https://github.com/natkalia/dystopias-kodilla-6.2
 
@@ -41,7 +41,7 @@ Project is created with:
 - [ ] add more content
 - [ ] add feature that sth should happen in middle column content after clicking tags/authors in the right column
 - [ ] verify and add info about launch/installation in readme.md
-- [ ] add hosting and info about github pages hosting
+- [x] add hosting and info about github pages hosting
 - [ ] double check linters description/implementation and add info about installation (as plugin/npm package etc.).
 
 ## Credits
