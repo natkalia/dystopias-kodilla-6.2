@@ -26,12 +26,6 @@ body {
   font-weight: 600;
 }
 
-.section-title span {
-  text-transform: none;
-  font-weight: 400;
-  color: #777777;
-}
-
 /* Layout */
 .wrapper {
   display: -ms-flexbox;
@@ -39,7 +33,7 @@ body {
   margin-left: 10px;
 }
 
-.sidebar {
+.sidebar-list, .sidebar-criteria {
   -ms-flex: 1 0 0px;
       flex: 1 0 0;
 }
@@ -49,7 +43,7 @@ body {
       flex: 2 0 0;
 }
 
-.sidebar, .posts {
+.sidebar-list, .sidebar-criteria, .posts {
   background: #fff;
   margin-right: 10px;
   padding: 40px;
@@ -62,7 +56,7 @@ body {
   font-family: "Bangers", cursive;
   color: #fff;
   font-weight: 400;
-  font-size: 104px;
+  font-size: 78px;
   line-height: 1;
   text-align: center;
 }
@@ -148,5 +142,36 @@ body {
 .tag-size-5 {
   font-size: 180%;
   color: #e74c3c;
+}
+
+/* Media */
+@media (max-width: 768px) {
+  .wrapper {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .sidebar-list, .sidebar-criteria, .posts {
+    width: 80%;
+    margin-top: 10px;
+  }
+  .sidebar-criteria {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .posts {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .sidebar-list {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .logo {
+    font-size: 56px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
