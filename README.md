@@ -1,4 +1,7 @@
 # Dystopias/cyberpunk/science-fiction Website :robot:
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+![Status: In progress](https://img.shields.io/badge/status-in%20progress-blueViolet)
+
 Dynamic webiste created as exercise for Web Developer Bootcamp in Kodilla (Module 6.2).
 
 In Kodilla this exercise was prepared with different content, I decided to change it for something that is more interesting for me: books and films that somehow fall into the category of: dystopias/anti-utopias/science-fiction/cyberpunk.
