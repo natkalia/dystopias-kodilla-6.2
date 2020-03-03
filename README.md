@@ -10,17 +10,25 @@ In Kodilla this exercise was prepared with different content, I decided to chang
 
 ![dystopias](https://user-images.githubusercontent.com/49140572/73445747-a9ea2200-435b-11ea-8e24-6c58da37a68a.PNG)
 
-## Setup
+## Live demo and setup for development
 
 **Live:** [https://natkalia.github.io/dystopias-kodilla-6.2](https://natkalia.github.io/dystopias-kodilla-6.2)
 
 **Repository**: https://github.com/natkalia/dystopias-kodilla-6.2
 
-You can also **download a zip archive** or a **clone repository** from github page:
+If you want to run this app at your local machine you have to **clone this repository** or just **download zip file** and unzip it locally. This is up to you. If you decide to clone this repo, you should use the below command in your command line tool: 
 ```bash
 git clone https://github.com/natkalia/dystopias-kodilla-6.2.git
 ```
-More info about launch/installation coming soon.
+After, move to the main folder of the app and use the following command which retrieves all dependencies necessary to build our application:
+```bash
+npm install
+```
+If the previous commands was executed successfully, it's time to start the app with the following command:
+```bash
+npm watch
+```
+As a result you should be taken to a browser with application running on localhost. Now you are ready to work!
 
 ## Technologies
 Project is created with:
